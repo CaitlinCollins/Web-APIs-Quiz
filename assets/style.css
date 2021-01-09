@@ -8,10 +8,6 @@ body {
 main {
 	margin-top: 10px;
 }
-/* Article Style */
-article {
-	overflow: auto;
-}
 /* Link Style */
 a {
 	font-size: 20px;
@@ -41,6 +37,7 @@ article {
 /* H1 Style */
 h1 {
 	padding: 30px 0 60px 0;
+	font-size: 34px;
 	color: rgb(54, 54, 54);
 }
 /* H2 Style */
@@ -54,4 +51,24 @@ h2 {
 	width: 160px;
 	font-size: 20px;
 	background-color: purple;
+}
+/** Special styling for screens under 768px **/
+@media only screen and (max-width: 768px) {
+	h1 {
+		padding: 30px 0 40px 0;
+	}
+	#start {
+		margin-top: 35px;
+	}
+}
+/* * Special styling for screens under 600px **/
+@media only screen and (max-width: 600px) {
+	article {
+		margin-top: 120px;
+		height: 500px;
+		padding: 0 15px;
+	}
+	h1 {
+		font-size: 30px;
+	}
 }
