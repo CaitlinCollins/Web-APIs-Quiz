@@ -1,0 +1,57 @@
+/* Body Style */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: aliceblue;
+}
+/* Main Style */
+main {
+	margin-top: 10px;
+}
+/* Article Style */
+article {
+	overflow: auto;
+}
+/* Link Style */
+a {
+	font-size: 20px;
+	color: purple;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(175, 174, 174);
+}
+.timer {
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	color: purple;
+}
+/* Article Style */
+article {
+	height: 400px;
+	width: auto;
+	margin: 200px auto 10px auto;
+	background-color: white;
+	border-style: solid;
+	border-color: purple;
+	border-width: 4px;
+}
+/* H1 Style */
+h1 {
+	padding: 30px 0 60px 0;
+	color: rgb(54, 54, 54);
+}
+/* H2 Style */
+h2 {
+	font-size: 28px;
+	color: rgb(54, 54, 54);
+}
+/* Start Button Style */
+#start {
+	margin-top: 50px;
+	width: 160px;
+	font-size: 20px;
+	background-color: purple;
+}
