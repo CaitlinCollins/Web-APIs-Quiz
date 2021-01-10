@@ -36,7 +36,7 @@ function start() {
     articleEl.append(p1);
     var btnOne = $("<button>");
     btnOne.html("1. Gary");
-    btnOne.attr("class", "btn btn-primary new");
+    btnOne.attr("class", "btn btn-primary quest1");
     p1.append(btnOne);
     // Advance to next page
     btnOne.on("click", function(){
@@ -48,7 +48,7 @@ function start() {
     articleEl.append(p2);
     var btnTwo = $("<button>");
     btnTwo.html("2. Scarn");
-    btnTwo.attr("class", "btn btn-primary new");
+    btnTwo.attr("class", "btn btn-primary quest1");
     p2.append(btnTwo);
     // Advance to next page
     btnTwo.on("click", function(){
@@ -60,7 +60,7 @@ function start() {
     articleEl.append(p3);
     var btnThree = $("<button>");
     btnThree.html("3. Beesly");
-    btnThree.attr("class", "btn btn-primary new");
+    btnThree.attr("class", "btn btn-primary quest1");
     p3.append(btnThree);
     // Advance to next page
     btnThree.on("click", function(){
@@ -72,21 +72,73 @@ function start() {
     articleEl.append(p4);
     var btnFour = $("<button>");
     btnFour.html("4. Scott");
-    btnFour.attr("class", "btn btn-primary new");
+    btnFour.attr("class", "btn btn-primary quest1");
     p4.append(btnFour);
     // Advance to next page
     btnFour.on("click", function(){
         quest2();
-    });
+    });     
         function quest2() {
             articleEl.empty();
-        }
+            // H2
+            var h2El = $("<h2>");
+            h2El.html("Where did Jim propose to Pam?");
+            h2El.attr("class", "newh2");
+            articleEl.append(h2El);
+            // Button 1
+            var p1 = $("<p>");
+            articleEl.append(p1);
+            var btnOne = $("<button>");
+            btnOne.html("1. On top of the Eiffel Tower.");
+            btnOne.attr("class", "btn btn-primary quest2");
+            p1.append(btnOne);
+            // Advance to next page
+            btnOne.on("click", function(){
+                secondsLeft -= 10;
+                quest3();
+            });
+            //  Button 2
+            var p2 = $("<p>");
+            articleEl.append(p2);
+            var btnTwo = $("<button>");
+            btnTwo.html("2. In front of a gas station.");
+            btnTwo.attr("class", "btn btn-primary quest2");
+            p2.append(btnTwo);
+            // Advance to next page
+            btnTwo.on("click", function(){
+                quest3();
+            });
+            // Button 3
+            var p3 = $("<p>");
+            articleEl.append(p3);
+            var btnThree = $("<button>");
+            btnThree.html("3. At the reception desk.");
+            btnThree.attr("class", "btn btn-primary quest2");
+            p3.append(btnThree);
+            // Advance to next page
+            btnThree.on("click", function(){
+                secondsLeft -= 10;
+                quest3();
+            });
+            // Button 4
+            var p4 = $("<p>");
+            articleEl.append(p4);
+            var btnFour = $("<button>");
+            btnFour.html("4. At the Christmas party.");
+            btnFour.attr("class", "btn btn-primary quest2");
+            p4.append(btnFour);
+            // Advance to next page
+            btnFour.on("click", function(){
+                secondsLeft -= 10;
+                quest3();
+            });
+                
     
 
 
-    //If the wrong answer is picked, decrement the time and advance to the next page.
 
 
+        }
 };
 
 
