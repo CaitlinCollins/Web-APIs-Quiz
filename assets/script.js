@@ -1,44 +1,78 @@
-var startButtonEl = document.querySelector("#start");
-var timerEl = document.querySelector(".timer");
-var h1El = document.querySelector("h1");
-var h2El = document.querySelector("h2");
-var articleEl = document.querySelector("article");
-var truffled = document.querySelector("#truffled");
-var problem = document.querySelector("problem");
-var gary = document.createElement("button");
-    gary.innerHTML = "Gary";
-var scarn = document.createElement("button");
-    scarn.innerHTML = "Scarn";
-var beesley = document.createElement("button");
-    beesley.innerHTML = "Beesly";
-var scott = document.createElement("button");
-    scott.innerHTML = "Scott";
+var startButtonEl = $(".start");
+var timerEl = $(".timer");
+var articleEl = $("article");
+
+$(".hide").hide();
+
 
 // Click event that starts the quiz.
-startButtonEl.addEventListener("click", function() {
-    firstQ();
+startButtonEl.on("click", function() {
+    start();
 });
-gary.addEventListener("click", gotProblem);
-scarn.addEventListener("click", gotProblem);
-beesley.addEventListener("click", gotProblem);
-scott.addEventListener("click", getTruffled);
 
-// Function that changes article content to first question upon clicking the button .
-function firstQ() {
-    startButtonEl.remove();
-    h1El.innerHTML = "Question 1";
-    h2El.innerHTML = "What is the character Michael's last name?"
-    articleEl.appendChild(gary);
-    articleEl.appendChild(scarn);
-    articleEl.appendChild(beesley);
-    articleEl.appendChild(scott);
+// Function that changes article content to first question upon clicking the button.
+function start() {
+    // Empty the Article.
+    articleEl.empty();
+    // H2
+    var h2El = $("<h2>");
+    h2El.html("What is the character Michael's last name?");
+    h2El.attr("class", "newh2");
+    articleEl.append(h2El);
+    // Button 1
+    var p1 = $("<p>");
+    articleEl.append(p1);
+    var btnOne = $("<button>");
+    btnOne.html("1. Gary");
+    btnOne.attr("class", "btn btn-primary new");
+    p1.append(btnOne);
+    // Advance to next page
+    btnOne.on("click", function(){
+        quest2();
+    });
+    //  Button 2
+    var p2 = $("<p>");
+    articleEl.append(p2);
+    var btnTwo = $("<button>");
+    btnTwo.html("2. Scarn");
+    btnTwo.attr("class", "btn btn-primary new");
+    p2.append(btnTwo);
+    // Advance to next page
+    btnTwo.on("click", function(){
+        quest2();
+    });
+    // Button 3
+    var p3 = $("<p>");
+    articleEl.append(p3);
+    var btnThree = $("<button>");
+    btnThree.html("3. Beesly");
+    btnThree.attr("class", "btn btn-primary new");
+    p3.append(btnThree);
+    // Advance to next page
+    btnThree.on("click", function(){
+        quest2();
+    });
+    // Button 4
+    var p4 = $("<p>");
+    articleEl.append(p4);
+    var btnFour = $("<button>");
+    btnFour.html("4. Scott");
+    btnFour.attr("class", "btn btn-primary new");
+    p4.append(btnFour);
+    // Advance to next page
+    btnFour.on("click", function(){
+        quest2();
+    });
+        function quest2() {
+            articleEl.empty();
+        }
+    
+
+
+    //If the wrong answer is picked, decrement the time and advance to the next page.
+
+
 };
 
-    
-function getTruffled() {
-    truffled.audioPlay();
-}
 
-function gotProblem() {
-    problem.audioPlay();
-}
+    

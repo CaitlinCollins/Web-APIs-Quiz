@@ -26,17 +26,13 @@ a:hover {
 }
 /* Article Style */
 article {
-	height: 400px;
+	height: 460px;
 	width: auto;
-	margin: 200px auto 10px auto;
-	background-color: white;
-	border-style: solid;
-	border-color: purple;
-	border-width: 4px;
+	margin: 100px auto 10px auto;
 }
 /* H1 Style */
 h1 {
-	padding: 30px 0 60px 0;
+	padding: 50px 0 40px 0;
 	font-size: 34px;
 	color: rgb(54, 54, 54);
 }
@@ -45,11 +41,29 @@ h2 {
 	font-size: 28px;
 	color: rgb(54, 54, 54);
 }
+/* New H2 Style */
+.newh2 {
+	text-align: center;
+	margin: 50px 0 25px 25px;
+}
+/* Paragraph Style */
+p {
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
 /* Start Button Style */
-#start {
-	margin-top: 50px;
+.start {
+	margin-top: 70px;
 	width: 160px;
 	font-size: 20px;
+	background-color: purple;
+}
+/* New Button Style */
+.new {
+	margin: 10px 0 0 120px;
+	width: 120px;
+	font-size: 16px;
 	background-color: purple;
 }
 /** Special styling for screens under 768px **/
