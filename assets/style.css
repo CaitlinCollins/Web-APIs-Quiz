@@ -71,18 +71,24 @@ p {
 	h1 {
 		padding: 30px 0 40px 0;
 	}
-	#start {
+	.start {
 		margin-top: 35px;
+	}
+	.new {
+		margin-left: 50px;
 	}
 }
 /* * Special styling for screens under 600px **/
 @media only screen and (max-width: 600px) {
 	article {
-		margin-top: 120px;
+		margin-top: 60px;
 		height: 500px;
 		padding: 0 15px;
 	}
 	h1 {
 		font-size: 30px;
+	}
+	.new {
+		margin-left: 40px;
 	}
 }

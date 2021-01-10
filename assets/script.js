@@ -1,14 +1,26 @@
 var startButtonEl = $(".start");
-var timerEl = $(".timer");
 var articleEl = $("article");
-
-$(".hide").hide();
-
+var timerEl = $(".timer");
 
 // Click event that starts the quiz.
 startButtonEl.on("click", function() {
     start();
+    setTime();
 });
+
+//Set the Timer
+var secondsLeft = 75;
+timerEl.text("Time: " + secondsLeft);
+function setTime() {
+    var interval = setInterval(function(){
+    secondsLeft--;
+    timerEl.text("Time: " + secondsLeft);
+        if(secondsLeft === 0) {
+            timerEl.text("Time: 0");
+            clearInterval(interval);
+        }
+    }, 1000);
+};    
 
 // Function that changes article content to first question upon clicking the button.
 function start() {
@@ -28,6 +40,7 @@ function start() {
     p1.append(btnOne);
     // Advance to next page
     btnOne.on("click", function(){
+        secondsLeft -= 10;
         quest2();
     });
     //  Button 2
@@ -39,6 +52,7 @@ function start() {
     p2.append(btnTwo);
     // Advance to next page
     btnTwo.on("click", function(){
+        secondsLeft -= 10;
         quest2();
     });
     // Button 3
@@ -50,6 +64,7 @@ function start() {
     p3.append(btnThree);
     // Advance to next page
     btnThree.on("click", function(){
+        secondsLeft -= 10;
         quest2();
     });
     // Button 4
