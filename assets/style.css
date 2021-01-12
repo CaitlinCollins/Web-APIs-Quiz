@@ -1,78 +1,116 @@
 /* Body Style */
+* {
+	box-sizing: border-box;
+}
+
 body {
-	margin: 0;
-	padding: 0;
 	background-color: aliceblue;
 }
-/* Main Style */
-main {
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-}
+
+/*** First Row HTML***/
+
 /* Link Style */
 a {
 	font-size: 20px;
 	color: purple;
 	text-decoration: none;
 }
-
 a:hover {
 	color: rgb(175, 174, 174);
 }
+a:active {
+	color: rgb(94, 94, 247);
+}
+
+/* Timer Style */
 .timer {
 	float: right;
 	font-size: 20px;
 	font-weight: bold;
 	color: purple;
 }
-/* Article Style */
-article {
-	height: 50%;
-	width: auto;
-	margin-top: 6%;
-}
+
+/*** Article HTML***/
+
 /* H1 Style */
 h1 {
 	text-align: center;
-	padding: 10% 0 6% 0;
+	padding: 10% 0 4% 0;
 	font-size: 34px;
 	color: rgb(54, 54, 54);
 }
+
 /* H2 Style */
 h2 {
 	text-align: center;
-	font-size: 30px;
+	font-size: 29px;
 	color: rgb(54, 54, 54);
 }
-/* New H2 Style */
-.newh2 {
-	text-align: left;
-	margin: 10% 0 5% 20%;
-}
-.finalH2 {
-	color: purple;
-}
-/* Paragraph Style */
-p {
-	text-align: left;
-}
-.finalP {
-	text-align: center;
-	margin-top: 5%;
-	font-size: 24px;
-}
-/* Start Button Style */
+
+/* Start Button Paragraph Style */
 .pstart {
 	text-align: center;
 }
+
+/* Start Button Style */
 .start {
-	margin-top: 6%;
-	width: 160px;
+	margin-top: 2%;
+	width: 180px;
 	font-size: 20px;
 	background-color: purple;
 }
+.start:active {
+	background-color: rgb(94, 94, 247);
+}
+
+/*** Hidden Form HTML ***/
+
+/* Text Style */
+.initialsSumbit {
+	margin-left: 4%;
+	font-size: 24px;
+	float: left;
+}
+
+/* Form Style */
+.formSubmit {
+	margin-left: 4%;
+	float: left;
+	width: 29%;
+}
+
+/* Button Style */
+.buttonSubmit {
+	margin-right: 4%;
+	float: right;
+	width: 180px;
+	font-size: 16px;
+	background-color: purple;
+}
+.buttonSubmit:active {
+	background-color: rgb(94, 94, 247);
+}
+
+/* Hides the Form */
+.hidden {
+	margin-top: 5.5%;
+	display: none;
+}
+
+/*** New Elements JS ***/
+
+/* H2 Style */
+.newh2 {
+	text-align: center;
+	margin: 10% 20% 5% 20%;
+}
+
+/* Paragraph Style */
+p {
+	text-align: left;
+	margin-left: 5%;
+}
+
 /* Question Button Style */
 .quest {
 	margin: 1% 0 0 20%;
@@ -80,79 +118,56 @@ p {
 	font-size: 16px;
 	background-color: purple;
 }
-.submitDiv {
-	float: left;
-	margin: 2% 0 0 20%;
+.quest:active {
+	background-color: rgb(94, 94, 247);
 }
-.submitForm {
-	float: left;
-	width: 160px;
-	margin: 1% 0 0 3.5%;
-}
-.submitButton {
-	float: right;
+
+/*** Final Page Style ***/
+
+/* H2 Style - Final Page */
+.finalH2 {
 	text-align: center;
-	margin: 1% 20% 0 0;
-	width: 80px;
-	height: 30px;
-	font-size: 16px;
-	background-color: purple;
+	margin: 10% 0 2% 0;
+	color: purple;
 }
+
+/* Paragraph Style - Final Page */
+.finalP {
+	text-align: center;
+	margin: 0;
+	font-size: 24px;
+}
+
 /* Alert Message Styling */
 .message {
-	width: 40%;
-	margin: 2% 0 0 31%;
-	position: relative;
+	width: 64%;
+	margin: 8% 18% 5% 18%;
 	text-align: left;
 	padding-left: 3%;
 	text-emphasis: bold;
 }
 
-/* Form Style */
-.initialsSumbit {
-	margin-top: 5.5%;
-	margin-left: 3%;
-	float: left;
-}
-.formSubmit {
-	margin-top: 4%;
-	margin-left: 4%;
-	float: left;
-	width: 28%;
-}
-.buttonSubmit {
-	margin-top: 3.5%;
-	margin-right: 7%;
-	float: right;
-	width: 20%;
-}
-.hidden {
-	display: none;
-}
-
 /** Special styling for screens under 768px **/
 @media only screen and (max-width: 768px) {
-	article {
-		margin-top: 20%;
-	}
+	/*** Article HTML***/
+
+	/* H1 Style */
 	h1 {
 		font-size: 32px;
+		margin-top: 8%;
 	}
+
+	/* H2 Style */
 	h2 {
 		font-size: 28px;
 	}
-	.quest {
-		margin-left: 27%;
-	}
-	.newh2 {
-		text-align: center;
-		font-size: 28px;
-		margin: 0% 0 5% 0;
+
+	/* Start Button Style */
+	.start {
+		margin-top: 6%;
 	}
 
-	.start {
-		margin-top: 35px;
-	}
+	/* Hidden Form Style */
 	.initialsSumbit {
 		margin-left: 2%;
 		float: left;
@@ -167,38 +182,94 @@ p {
 		margin-left: 31%;
 		width: 40%;
 	}
-}
-/** Special styling for screens under 600px **/
-@media only screen and (max-width: 600px) {
-	article {
-		margin-top: 20%;
-		height: 50%;
-		padding: 0 3%;
-	}
-	.quest {
-		margin-left: 20%;
-	}
+
+	/*** New Elements JS ***/
+
+	/* H2 Style */
 	.newh2 {
 		text-align: center;
-		font-size: 22px;
+		font-size: 28px;
+		margin: 25% 10% 5% 10%;
 	}
-	.finalP {
-		font-size: 20px;
+
+	/* Button Paragraph Style */
+	p {
+		margin-left: 20%;
 	}
-	.message {
-		text-align: center;
+
+	/*** Final Page ***/
+
+	/* H2 Style */
+	.finalH2 {
+		margin-top: 25%;
 	}
+}
+
+/** Special styling for screens under 600px **/
+@media only screen and (max-width: 600px) {
+	/*** Article HTML***/
+
+	/* H1 Style */
+	h1 {
+		margin-top: 25%;
+		font-size: 28px;
+	}
+
+	/* H2 Style */
+	h2 {
+		margin: 0 5%;
+		font-size: 24px;
+	}
+
+	/* Hidden Form Style */
 	.initialsSumbit {
-		margin-left: 10%;
+		font-size: 18px;
 		float: left;
+		margin: 7.5% 0 0 4%;
 	}
 	.formSubmit {
-		margin-right: 10%;
 		float: right;
+		margin: 5% 0 0 0;
 	}
 	.buttonSubmit {
 		float: left;
-		margin-left: 31%;
+		margin-left: 34%;
 		width: 40%;
+	}
+
+	/*** New Elements JS ***/
+
+	/* H2 Style */
+	.newh2 {
+		text-align: center;
+		font-size: 24px;
+		margin-bottom: 10%;
+	}
+
+	/* Button Paragraph Style */
+	p {
+		margin: 0 10%;
+	}
+
+	/* Button Style */
+	.quest {
+		margin: 4% 0 0 17%;
+	}
+
+	/*** Final Page ***/
+
+	/* H2 Style */
+	.finalH2 {
+		font-size: 22px;
+		margin-bottom: 8%;
+	}
+	.finalP {
+		font-size: 20px;
+		margin: 0 10%;
+	}
+
+	/* Message Style */
+	.message {
+		text-align: center;
 	}
 }

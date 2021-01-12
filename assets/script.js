@@ -17,7 +17,7 @@ timerEl.text("Time: " + secondsLeft);
 function startTimer() {
     interval = setInterval(function(){
     secondsLeft--;
-    timerEl.text("Time: " + secondsLeft);
+    timerEl.html("Time: " + secondsLeft);
     if(secondsLeft <= 0) {
         timerEl.text("Out of Time!");
         finalPage();
@@ -29,7 +29,7 @@ function startTimer() {
 function correctAnswer (){
     correctDiv = $("<div>");
     correctDiv.attr("class", "alert alert-success message");
-    correctDiv.html("Correct-a-mundo!");
+    correctDiv.html("That's what she said!");
     mainEl.append(correctDiv);
     setTimeout(function (){
         correctDiv.remove() 
@@ -38,7 +38,7 @@ function correctAnswer (){
 function incorrectAnswer (){
     incorrectDiv = $("<div>");
     incorrectDiv.attr("class", "alert alert-danger message");
-    incorrectDiv.html("False.");
+    incorrectDiv.html("You have never been more wrong.");
     mainEl.append(incorrectDiv);
     setTimeout(function (){
         incorrectDiv.remove() 
@@ -532,7 +532,7 @@ function start() {
                                     articleEl.empty();
                                     // H2
                                     var h2El = $("<h2>");
-                                    h2El.html("What is the name of the boom operator in whom Pam confides in the fianl season?");
+                                    h2El.html("What is the name of the boom operator in whom Pam confides in the final season?");
                                     h2El.attr("class", "newh2");
                                     articleEl.append(h2El);
                                     // Button 1
