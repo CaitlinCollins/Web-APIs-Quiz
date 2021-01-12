@@ -662,16 +662,22 @@ var pEl = $("<p>");
         h2El.attr("class", "finalH2");
         pEl.html("I'm shocked, but you have succeeded. You're Score Is: <b>" + secondsLeft + "</b>!");
         pEl.attr("class", "finalP");
+        if ($(".hidden").css("display","none")) {
+            $(".hidden").css("display","block")
+        };
     }
     else {
         h2El.html("You Failed Miserably!");
         h2El.attr("class", "finalH2");
         pEl.html("You'll never be Regoinal Manager! Care to try your luck again?")
-        pEl.attr("class", "finalP");
-        
+        pEl.attr("class", "finalP");  
     };
     articleEl.append(h2El); 
     articleEl.append(pEl);
+
+
+    // $(btnRetry).on("click", start(), startTimer());
+
 
 // var submitDiv = $("<div>");
 // submitDiv.html("Enter your intials!");

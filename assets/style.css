@@ -60,6 +60,7 @@ p {
 }
 .finalP {
 	text-align: center;
+	margin-top: 5%;
 	font-size: 24px;
 }
 /* Start Button Style */
@@ -107,6 +108,28 @@ p {
 	text-emphasis: bold;
 }
 
+/* Form Style */
+.initialsSumbit {
+	margin-top: 5.5%;
+	margin-left: 3%;
+	float: left;
+}
+.formSubmit {
+	margin-top: 4%;
+	margin-left: 4%;
+	float: left;
+	width: 28%;
+}
+.buttonSubmit {
+	margin-top: 3.5%;
+	margin-right: 7%;
+	float: right;
+	width: 20%;
+}
+.hidden {
+	display: none;
+}
+
 /** Special styling for screens under 768px **/
 @media only screen and (max-width: 768px) {
 	article {
@@ -124,12 +147,25 @@ p {
 	.newh2 {
 		text-align: center;
 		font-size: 28px;
-		margin: 0 0 5% 0;
-		padding-top: 10%;
+		margin: 0% 0 5% 0;
 	}
 
 	.start {
 		margin-top: 35px;
+	}
+	.initialsSumbit {
+		margin-left: 2%;
+		float: left;
+	}
+	.formSubmit {
+		margin-right: 2%;
+		width: 35%;
+		float: right;
+	}
+	.buttonSubmit {
+		float: left;
+		margin-left: 31%;
+		width: 40%;
 	}
 }
 /** Special styling for screens under 600px **/
@@ -151,5 +187,18 @@ p {
 	}
 	.message {
 		text-align: center;
+	}
+	.initialsSumbit {
+		margin-left: 10%;
+		float: left;
+	}
+	.formSubmit {
+		margin-right: 10%;
+		float: right;
+	}
+	.buttonSubmit {
+		float: left;
+		margin-left: 31%;
+		width: 40%;
 	}
 }
