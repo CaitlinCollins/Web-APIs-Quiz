@@ -1,6 +1,8 @@
 var startButtonEl = $(".start");
 var articleEl = $("article");
 var timerEl = $(".timer");
+var mainEl = $("main");
+
 // Click event that starts the quiz.
 startButtonEl.on("click", function() {
     startTimer();
@@ -23,8 +25,28 @@ function startTimer() {
     }, 1000);
 };
 
-    //////// Start the Quiz! ////////
-    function start() {
+// Set Alert Message Time Out
+function correctAnswer (){
+    correctDiv = $("<div>");
+    correctDiv.attr("class", "alert alert-success message");
+    correctDiv.html("Correct-a-mundo!");
+    mainEl.append(correctDiv);
+    setTimeout(function (){
+        correctDiv.remove() 
+    }, 1500);
+};
+function incorrectAnswer (){
+    incorrectDiv = $("<div>");
+    incorrectDiv.attr("class", "alert alert-danger message");
+    incorrectDiv.html("False.");
+    mainEl.append(incorrectDiv);
+    setTimeout(function (){
+        incorrectDiv.remove() 
+    }, 1500);
+};
+
+//////// Start the Quiz! ////////
+function start() {
     // Empty the Article.
     articleEl.empty();
     // H2
@@ -41,6 +63,7 @@ function startTimer() {
     p1.append(btnOne);
     // Advance to next page
     btnOne.on("click", function(){
+        incorrectAnswer();
         secondsLeft -= 10;
         quest2();
     });
@@ -53,6 +76,7 @@ function startTimer() {
     p2.append(btnTwo);
     // Advance to next page
     btnTwo.on("click", function(){
+        incorrectAnswer();
         secondsLeft -= 10;
         quest2();
     });
@@ -65,6 +89,7 @@ function startTimer() {
     p3.append(btnThree);
     // Advance to next page
     btnThree.on("click", function(){
+        incorrectAnswer();
         secondsLeft -= 10;
         quest2();
     });
@@ -77,12 +102,14 @@ function startTimer() {
     p4.append(btnFour);
     // Advance to next page
     btnFour.on("click", function(){
+        correctAnswer();
         quest2();
     });
 };
-    //////// QUESTION 2 //////// 
+//////// QUESTION 2 //////// 
     function quest2() {
         articleEl.empty();
+
         // H2
         var h2El = $("<h2>");
         h2El.html("Where did Jim propose to Pam?");
@@ -97,6 +124,7 @@ function startTimer() {
         p1.append(btnOne);
         // Advance to next page
         btnOne.on("click", function(){
+            incorrectAnswer();
             secondsLeft -= 10;
             quest3();
         });
@@ -109,6 +137,7 @@ function startTimer() {
         p2.append(btnTwo);
         // Advance to next page
         btnTwo.on("click", function(){
+            correctAnswer();
             quest3();
         });
         // Button 3
@@ -120,6 +149,7 @@ function startTimer() {
         p3.append(btnThree);
         // Advance to next page
         btnThree.on("click", function(){
+            incorrectAnswer();
             secondsLeft -= 10;
             quest3();
         });
@@ -132,6 +162,7 @@ function startTimer() {
         p4.append(btnFour);
         // Advance to next page
         btnFour.on("click", function(){
+            incorrectAnswer();
             secondsLeft -= 10;
             quest3();
         });
@@ -153,6 +184,7 @@ function startTimer() {
             p1.append(btnOne);
             // Advance to next page
             btnOne.on("click", function(){
+                incorrectAnswer();
                 secondsLeft -= 10;
                 quest4();
             });
@@ -165,6 +197,7 @@ function startTimer() {
             p2.append(btnTwo);
             // Advance to next page
             btnTwo.on("click", function(){
+                incorrectAnswer();
                 secondsLeft -= 10;
                 quest4();
             });
@@ -177,6 +210,7 @@ function startTimer() {
             p3.append(btnThree);
             // Advance to next page
             btnThree.on("click", function(){
+                incorrectAnswer();
                 secondsLeft -= 10;
                 quest4();
             });
@@ -189,6 +223,7 @@ function startTimer() {
             p4.append(btnFour);
             // Advance to next page
             btnFour.on("click", function(){
+                correctAnswer();
                 quest4();
             });
         };
@@ -209,6 +244,7 @@ function startTimer() {
                 p1.append(btnOne);
                 // Advance to next page
                 btnOne.on("click", function(){
+                    correctAnswer();
                     quest5();
                 });
                 //  Button 2
@@ -220,6 +256,7 @@ function startTimer() {
                 p2.append(btnTwo);
                 // Advance to next page
                 btnTwo.on("click", function(){
+                    incorrectAnswer();
                     secondsLeft -= 10;
                     quest5();
                 });
@@ -232,6 +269,7 @@ function startTimer() {
                 p3.append(btnThree);
                 // Advance to next page
                 btnThree.on("click", function(){
+                    incorrectAnswer();
                     secondsLeft -= 10;
                     quest5();
                 });
@@ -244,6 +282,7 @@ function startTimer() {
                 p4.append(btnFour);
                 // Advance to next page
                 btnFour.on("click", function(){
+                    incorrectAnswer();
                     secondsLeft -= 10;
                     quest5();
                 });
@@ -265,6 +304,7 @@ function startTimer() {
                     p1.append(btnOne);
                     // Advance to next page
                     btnOne.on("click", function(){
+                        incorrectAnswer();
                         secondsLeft -= 10;
                         quest6();
                     });
@@ -277,6 +317,7 @@ function startTimer() {
                     p2.append(btnTwo);
                     // Advance to next page
                     btnTwo.on("click", function(){
+                        incorrectAnswer();
                         secondsLeft -= 10;
                         quest6();
                     });
@@ -289,6 +330,7 @@ function startTimer() {
                     p3.append(btnThree);
                     // Advance to next page
                     btnThree.on("click", function(){
+                        correctAnswer();
                         quest6();
                     });
                     // Button 4
@@ -300,6 +342,7 @@ function startTimer() {
                     p4.append(btnFour);
                     // Advance to next page
                     btnFour.on("click", function(){
+                        incorrectAnswer();
                         secondsLeft -= 10;
                         quest6();
                     });
@@ -321,6 +364,7 @@ function startTimer() {
                         p1.append(btnOne);
                         // Advance to next page
                         btnOne.on("click", function(){
+                            incorrectAnswer();
                             secondsLeft -=10;
                             quest7();
                         });
@@ -333,6 +377,7 @@ function startTimer() {
                         p2.append(btnTwo);
                         // Advance to next page
                         btnTwo.on("click", function(){
+                            correctAnswer();
                             quest7();
                         });
                         // Button 3
@@ -344,6 +389,7 @@ function startTimer() {
                         p3.append(btnThree);
                         // Advance to next page
                         btnThree.on("click", function(){
+                            incorrectAnswer();
                             secondsLeft -= 10;
                             quest7();
                         });
@@ -356,6 +402,7 @@ function startTimer() {
                         p4.append(btnFour);
                         // Advance to next page
                         btnFour.on("click", function(){
+                            incorrectAnswer();
                             secondsLeft -= 10;
                             quest7();
                         });
@@ -377,6 +424,7 @@ function startTimer() {
                             p1.append(btnOne);
                             // Advance to next page
                             btnOne.on("click", function(){
+                                incorrectAnswer();
                                 secondsLeft -= 10;
                                 quest8();
                             });
@@ -389,6 +437,7 @@ function startTimer() {
                             p2.append(btnTwo);
                             // Advance to next page
                             btnTwo.on("click", function(){
+                                incorrectAnswer();
                                 secondsLeft -= 10;
                                 quest8();
                             });
@@ -401,6 +450,7 @@ function startTimer() {
                             p3.append(btnThree);
                             // Advance to next page
                             btnThree.on("click", function(){
+                                correctAnswer();
                                 quest8();
                             });
                             // Button 4
@@ -412,6 +462,7 @@ function startTimer() {
                             p4.append(btnFour);
                             // Advance to next page
                             btnFour.on("click", function(){
+                                incorrectAnswer();
                                 secondsLeft -= 10;
                                 quest8();
                             });
@@ -433,6 +484,7 @@ function startTimer() {
                                 p1.append(btnOne);
                                 // Advance to next page
                                 btnOne.on("click", function(){
+                                    correctAnswer();
                                     quest9();
                                 });
                                 //  Button 2
@@ -444,6 +496,7 @@ function startTimer() {
                                 p2.append(btnTwo);
                                 // Advance to next page
                                 btnTwo.on("click", function(){
+                                    incorrectAnswer();
                                     secondsLeft -= 10;
                                     quest9();
                                 });
@@ -456,6 +509,7 @@ function startTimer() {
                                 p3.append(btnThree);
                                 // Advance to next page
                                 btnThree.on("click", function(){
+                                    incorrectAnswer();
                                     secondsLeft -= 10;
                                     quest9();
                                 });
@@ -468,6 +522,7 @@ function startTimer() {
                                 p4.append(btnFour);
                                 // Advance to next page
                                 btnFour.on("click", function(){
+                                    incorrectAnswer();
                                     secondsLeft -= 10;
                                     quest9();
                                 });
@@ -489,6 +544,7 @@ function startTimer() {
                                     p1.append(btnOne);
                                     // Advance to next page
                                     btnOne.on("click", function(){
+                                        incorrectAnswer();
                                         secondsLeft -= 10;
                                         quest10();
                                     });
@@ -501,6 +557,7 @@ function startTimer() {
                                     p2.append(btnTwo);
                                     // Advance to next page
                                     btnTwo.on("click", function(){
+                                        correctAnswer();
                                         quest10();
                                     });
                                     // Button 3
@@ -512,6 +569,7 @@ function startTimer() {
                                     p3.append(btnThree);
                                     // Advance to next page
                                     btnThree.on("click", function(){
+                                        incorrectAnswer();
                                         secondsLeft -= 10;
                                         quest10();
                                     });
@@ -524,6 +582,7 @@ function startTimer() {
                                     p4.append(btnFour);
                                     // Advance to next page
                                     btnFour.on("click", function(){
+                                        incorrectAnswer();
                                         secondsLeft -= 10;
                                         quest10();
                                     });
@@ -546,6 +605,7 @@ function startTimer() {
                                         p1.append(btnOne);
                                         // Advance to next page
                                         btnOne.on("click", function(){
+                                            incorrectAnswer();
                                             secondsLeft -= 10;
                                             finalPage();
                                         });
@@ -558,6 +618,7 @@ function startTimer() {
                                         p2.append(btnTwo);
                                         // Advance to next page
                                         btnTwo.on("click", function(){
+                                            incorrectAnswer();
                                             secondsLeft -= 10;
                                             finalPage();
                                         });
@@ -570,6 +631,7 @@ function startTimer() {
                                         p3.append(btnThree);
                                         // Advance to next page
                                         btnThree.on("click", function(){
+                                            correctAnswer();
                                             finalPage();
                                         });
                                         // Button 4
@@ -581,6 +643,7 @@ function startTimer() {
                                         p4.append(btnFour);
                                         // Advance to next page
                                         btnFour.on("click", function(){
+                                            incorrectAnswer();
                                             secondsLeft -= 10;
                                             finalPage();
                                         });
@@ -589,34 +652,38 @@ function startTimer() {
 
 //////// FINAL PAGE ////////
 function finalPage() {
-    articleEl.empty();
-    clearInterval(interval);
-    // if (secondsLeft > 0) {
-    //     timerEl.text("Time: " + secondsLeft);
-    // }
-    // else 
-    //     timerEl.text("Out of Time!");
+articleEl.empty();
+clearInterval(interval);
+// H2
+var h2El = $("<h2>");
+var pEl = $("<p>");
+    if (secondsLeft > 0) {
+        h2El.html("Bears! Beets! Battlestar Galactica!");
+        h2El.attr("class", "finalH2");
+        pEl.html("I'm shocked, but you have succeeded. You're Score Is: <b>" + secondsLeft + "</b>!");
+        pEl.attr("class", "finalP");
+    }
+    else {
+        h2El.html("You Failed Miserably!");
+        h2El.attr("class", "finalH2");
+        pEl.html("You'll never be Regoinal Manager! Care to try your luck again?")
+        pEl.attr("class", "finalP");
         
-    // H2
-    var h2El = $("<h2>");
-    h2El.html("Bears. Beets. Batalstar Galactica.");
-    h2El.attr("class", "finalH2");
-    articleEl.append(h2El);
-    var pEl = $("<p>");
-    pEl.html("You've completed your assesment!");
-    pEl.attr("class", "finalP");
+    };
+    articleEl.append(h2El); 
     articleEl.append(pEl);
-    var submitDiv = $("<div>");
-    submitDiv.html("Enter your intials!");
-    submitDiv.attr("class", "submitDiv");
-    articleEl.append(submitDiv);
-    var submitForm = $("<input type='text'/>");
-    submitForm.attr("class", "submitForm");
-    articleEl.append(submitForm);
-    var submitButton =$("<button>");
-    submitButton.html("Submit");
-    submitButton.attr("class", "btn btn-primary submitButton");
-    articleEl.append(submitButton);
+
+// var submitDiv = $("<div>");
+// submitDiv.html("Enter your intials!");
+// submitDiv.attr("class", "submitDiv");
+// articleEl.append(submitDiv);
+// var submitForm = $("<input type='text'/>");
+// submitForm.attr("class", "submitForm");
+// articleEl.append(submitForm);
+// var submitButton =$("<button>");
+// submitButton.html("Submit");
+// submitButton.attr("class", "btn btn-primary submitButton");
+// articleEl.append(submitButton);
 }
 
 
