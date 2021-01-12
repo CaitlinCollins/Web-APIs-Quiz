@@ -675,21 +675,21 @@ var pEl = $("<p>");
     articleEl.append(h2El); 
     articleEl.append(pEl);
 
+var userInitials = "";
+$("#submit").on("click", function (event){
+    event.preventDefault();
+    userInitials = $("input").val();
+    localStorage.setItem("score", secondsLeft);
+    localStorage.setItem("initals", userInitials);
 
-    // $(btnRetry).on("click", start(), startTimer());
+    if (userInitials === "") {
+        alert("Error! You must enter your initials!");
+    }
+    else {
+        alert("Success! Your initals have been added to the highscores!");
+    }
+});
 
-
-// var submitDiv = $("<div>");
-// submitDiv.html("Enter your intials!");
-// submitDiv.attr("class", "submitDiv");
-// articleEl.append(submitDiv);
-// var submitForm = $("<input type='text'/>");
-// submitForm.attr("class", "submitForm");
-// articleEl.append(submitForm);
-// var submitButton =$("<button>");
-// submitButton.html("Submit");
-// submitButton.attr("class", "btn btn-primary submitButton");
-// articleEl.append(submitButton);
-}
+};
 
 
