@@ -669,11 +669,12 @@ var pEl = $("<p>");
     else {
         h2El.html("You Failed Miserably!");
         h2El.attr("class", "finalH2");
-        pEl.html("You'll never be Regoinal Manager! Care to try your luck again?")
-        pEl.attr("class", "finalP");  
+        pEl.html("You'll never be Regoinal Manager! Womp, womp!")
+        pEl.attr("class", "finalP"); 
     };
     articleEl.append(h2El); 
     articleEl.append(pEl);
+   
 
 var userInitials = "";
 $("#submit").on("click", function (event){
