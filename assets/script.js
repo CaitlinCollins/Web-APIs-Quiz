@@ -3,6 +3,9 @@ var articleEl = $("article");
 var timerEl = $(".timer");
 var mainEl = $("main");
 
+// Hides the Form
+$(".hidden").hide();
+
 // Click event that starts the quiz.
 startButtonEl.on("click", function() {
     startTimer();
@@ -172,7 +175,7 @@ function start() {
             articleEl.empty();
             // H2
             var h2El = $("<h2>");
-            h2El.html("What type of crop down Dwight farm?");
+            h2El.html("What type of crop does Dwight farm?");
             h2El.attr("class", "newh2");
             articleEl.append(h2El);
             // Button 1
@@ -662,9 +665,7 @@ var pEl = $("<p>");
         h2El.attr("class", "finalH2");
         pEl.html("I'm shocked, but you have succeeded. You're Score Is: <b>" + secondsLeft + "</b>!");
         pEl.attr("class", "finalP");
-        if ($(".hidden").css("display","none")) {
-            $(".hidden").css("display","block")
-        };
+        $(".hidden").show();
     }
     else {
         h2El.html("You Failed Miserably!");
@@ -681,16 +682,26 @@ $("#submit").on("click", function (event){
     event.preventDefault();
     userInitials = $("input").val();
     localStorage.setItem("score", secondsLeft);
-    localStorage.setItem("initals", userInitials);
+    localStorage.setItem("initials", userInitials);
 
     if (userInitials === "") {
         alert("Error! You must enter your initials!");
     }
     else {
         alert("Success! Your initals have been added to the highscores!");
+        var highscoreDiv = $(".highscores");
+        var getScore = localStorage.getItem("score");
+        var getInitials = localStorage.getItem("initials");
+        function getHighScore () {
+            var winner = $("<p>");
+            winner.html = (getInitials + ": " + getScore + " points!");
+            highscoreDiv.append(winner);
+            console.log(winner.html);
+    }
+        getHighScore();
     }
 });
-
 };
+
 
 

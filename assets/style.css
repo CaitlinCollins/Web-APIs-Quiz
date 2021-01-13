@@ -5,6 +5,7 @@
 
 body {
 	background-color: aliceblue;
+	padding-top: 1%;
 }
 
 /*** First Row HTML***/
@@ -54,7 +55,7 @@ h2 {
 
 /* Start Button Style */
 .start {
-	margin-top: 2%;
+	margin: 2% 0;
 	width: 180px;
 	font-size: 20px;
 	background-color: purple;
@@ -67,34 +68,28 @@ h2 {
 
 /* Text Style */
 .initialsSumbit {
-	margin-left: 4%;
+	display: inline-block;
+	margin-left: 12%;
+	width: 240px;
 	font-size: 24px;
-	float: left;
 }
 
 /* Form Style */
 .formSubmit {
-	margin-left: 4%;
-	float: left;
-	width: 29%;
+	display: inline-block;
+	width: 160px;
+	margin-right: 4%;
 }
 
 /* Button Style */
 .buttonSubmit {
-	margin-right: 4%;
-	float: right;
-	width: 180px;
+	display: inline-block;
+	width: 100px;
 	font-size: 16px;
 	background-color: purple;
 }
 .buttonSubmit:active {
 	background-color: rgb(94, 94, 247);
-}
-
-/* Hides the Form */
-.hidden {
-	margin-top: 5.5%;
-	display: none;
 }
 
 /*** New Elements JS ***/
@@ -134,7 +129,7 @@ p {
 /* Paragraph Style - Final Page */
 .finalP {
 	text-align: center;
-	margin: 0;
+	margin: 0 0 4% 0;
 	font-size: 24px;
 }
 
@@ -159,29 +154,29 @@ p {
 
 	/* H2 Style */
 	h2 {
+		margin-left: 8%;
 		font-size: 28px;
 		text-align: center;
 	}
 
 	/* Start Button Style */
 	.start {
-		margin-top: 6%;
+		margin: 6% 0 0 6%;
 	}
 
 	/* Hidden Form Style */
 	.initialsSumbit {
-		margin-left: 2%;
-		float: left;
+		margin-left: 0;
+		font-size: 20px;
+		width: 200px;
 	}
 	.formSubmit {
+		width: 120px;
 		margin-right: 2%;
-		width: 35%;
-		float: right;
 	}
 	.buttonSubmit {
-		float: left;
-		margin-left: 31%;
-		width: 40%;
+		width: 100px;
+		font-size: 16px;
 	}
 
 	/*** New Elements JS ***/
@@ -204,6 +199,10 @@ p {
 	.finalH2 {
 		margin-top: 25%;
 	}
+	/* Paragraph Style */
+	.finalP {
+		margin-bottom: 6%;
+	}
 }
 
 /** Special styling for screens under 600px **/
@@ -218,28 +217,21 @@ p {
 
 	/* H2 Style */
 	h2 {
-		margin-left: 8%;
 		font-size: 22px;
 	}
 
-	/* Start Button Paragraph */
-	.pstart {
-		margin-left: 10%;
-	}
 	/* Hidden Form Style */
 	.initialsSumbit {
+		margin-left: 4%;
 		font-size: 18px;
-		float: left;
-		margin: 7.5% 0 0 4%;
 	}
 	.formSubmit {
-		float: right;
-		margin: 5% 0 0 0;
+		margin-right: 0;
 	}
 	.buttonSubmit {
-		float: left;
-		margin-left: 30%;
-		width: 40%;
+		width: 100px;
+		font-size: 16px;
+		margin: 8% 0 0 35%;
 	}
 
 	/*** New Elements JS ***/
@@ -270,7 +262,7 @@ p {
 	}
 	.finalP {
 		font-size: 20px;
-		margin: 0 10%;
+		margin: 0 10% 6% 10%;
 	}
 
 	/* Message Style */
