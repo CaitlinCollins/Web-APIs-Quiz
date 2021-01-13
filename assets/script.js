@@ -660,6 +660,7 @@ clearInterval(interval);
 // H2
 var h2El = $("<h2>");
 var pEl = $("<p>");
+var retry = $("<button>");
     if (secondsLeft > 0) {
         h2El.html("Bears! Beets! Battlestar Galactica!");
         h2El.attr("class", "finalH2");
@@ -671,10 +672,18 @@ var pEl = $("<p>");
         h2El.html("You Failed Miserably!");
         h2El.attr("class", "finalH2");
         pEl.html("You'll never be Regoinal Manager! Womp, womp!")
-        pEl.attr("class", "finalP"); 
+        pEl.attr("class", "finalP");
+        retry.html("Let's Try Again!");
+        retry.attr("class","btn btn-primary start retry");
+        articleEl.append(retry);
+        $(retry).on("click", function reloadPage() {
+            location.reload();
+        });
     };
-    articleEl.append(h2El); 
-    articleEl.append(pEl);
+    articleEl.prepend(pEl); 
+    articleEl.prepend(h2El);
+
+    
    
 
 var userInitials = "";

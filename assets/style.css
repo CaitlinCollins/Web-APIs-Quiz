@@ -133,6 +133,11 @@ p {
 	font-size: 24px;
 }
 
+/* Retry Button Style */
+.retry {
+	margin-left: 41.5%;
+}
+
 /* Alert Message Styling */
 .message {
 	width: 64%;
@@ -203,6 +208,10 @@ p {
 	.finalP {
 		margin-bottom: 6%;
 	}
+	/* Retry Button Style */
+	.retry {
+		margin-left: 35%;
+	}
 }
 
 /** Special styling for screens under 600px **/
@@ -220,6 +229,11 @@ p {
 		font-size: 22px;
 	}
 
+	/* Start Button Style */
+	.start {
+		margin: 8% 0 0 8%;
+	}
+
 	/* Hidden Form Style */
 	.initialsSumbit {
 		margin-left: 4%;
@@ -229,9 +243,9 @@ p {
 		margin-right: 0;
 	}
 	.buttonSubmit {
-		width: 100px;
-		font-size: 16px;
-		margin: 8% 0 0 35%;
+		width: 180px;
+		font-size: 20px;
+		margin: 6% 0 0 25%;
 	}
 
 	/*** New Elements JS ***/
@@ -257,12 +271,17 @@ p {
 
 	/* H2 Style */
 	.finalH2 {
-		font-size: 22px;
+		font-size: 26px;
 		margin-bottom: 8%;
 	}
 	.finalP {
-		font-size: 20px;
-		margin: 0 10% 6% 10%;
+		font-size: 24px;
+		margin: 0 10% 18% 10%;
+	}
+
+	/* Retry Button Style */
+	.retry {
+		margin-left: 20%;
 	}
 
 	/* Message Style */
