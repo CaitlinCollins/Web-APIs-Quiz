@@ -3,6 +3,12 @@ var articleEl = $("article");
 var timerEl = $(".timer");
 var mainEl = $("main");
 
+// Audio Elements
+var shesaid = $("#shesaid");
+$(shesaid).trigger("load");
+var problem = $("#problem");
+$(problem).trigger("load");
+    
 // Hides the Form
 $(".hidden").hide();
 
@@ -34,6 +40,7 @@ function correctAnswer (){
     correctDiv.attr("class", "alert alert-success message");
     correctDiv.html("That's what she said!");
     mainEl.append(correctDiv);
+    $(shesaid).trigger("play");
     setTimeout(function (){
         correctDiv.remove() 
     }, 1500);
@@ -41,8 +48,9 @@ function correctAnswer (){
 function incorrectAnswer (){
     incorrectDiv = $("<div>");
     incorrectDiv.attr("class", "alert alert-danger message");
-    incorrectDiv.html("You have never been more wrong.");
+    incorrectDiv.html("What is your problem?");
     mainEl.append(incorrectDiv);
+    $(problem).trigger("play");
     setTimeout(function (){
         incorrectDiv.remove() 
     }, 1500);
