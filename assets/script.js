@@ -696,9 +696,6 @@ var retry = $("<button>");
 }  
 // Highscore setting
 var userInitials = $(".formSubmit");
-var winnersList = $("#winnersList");
-winnersList.location("href", "highscores.html");
-var clearScore = $("#clearScore");
 var scores = [];
 
 $("#submit").on("click", function (event){
@@ -712,34 +709,7 @@ $("#submit").on("click", function (event){
 
     else {
         alert("Success! Your initals have been added to the highscores!");
-        // This will run when the highscore page loads
-        // The following function renders items in a todo list as <li> elements
-        function renderScores() {
-
-            // Render a new li for each winner
-            for (var i = 0; i < scores.length; i++) {
-            var winner = scores[i];
         
-            var li = document.createElement("li");
-            li.textContent = winner;
-            li.setAttribute("data-index", i);
-            winnersList.append(li);
-            console.log(li);
-            }
-        }
-
-        function getHighScore() {
-        // get scores from local storage
-        var storedScores = JSON.parse(localStorage.getItem("scores"));
-
-        // update the array
-        if (storedScores !== null) {
-            scores = storedScores;
-        };
-
-        // render the scores to the DOM
-        renderScores();
-        };
         // Store scores
         function storeScores() {
             localStorage.setItem("scores", JSON.stringify(scores));
@@ -754,16 +724,5 @@ $("#submit").on("click", function (event){
 
         // store and render the updates scores
         storeScores();
-        renderScores();
     }
-
-
-
-    // add a click event to the clearScore button
-    $(clearScore).on("click", function (){
-        $("#winnersList").empty()
-    });
-
-    // render data to page on load
-    getHighScore()
 });
