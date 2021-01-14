@@ -45,14 +45,8 @@ function incorrectAnswer (){
     }, 1500);
 };
 
-// var question = "";
-// var btnOne = "";
-// var btnTwo = "";
-// var btnThree = "";
-// var btnFour = "";
-// var correct = "";
 
-// var myQuizArray = [
+// var questions = [
 //     {
 //         question: "What is the character Michael's last name?",
 //         btnOne: "Gary",
@@ -133,48 +127,50 @@ function incorrectAnswer (){
 //         correct: "Colorado",
     
 //     },
-// ]
+// ];
+
+
 
 // // Start Funtion
-// function start () {
-//     // Empty the Article.
-//     articleEl.empty();
-// for (i=0; i<question.length; i++) {
-//     // H2
-//     var h2El = $("<h2>");
-//     h2El.html(question);
-//     h2El.attr("class", "newh2");
-//     articleEl.append(h2El);
-//     // Button 1
-//     var p1 = $("<p>");
-//     articleEl.append(p1);
-//     var first = $("<button>");
-//     first.html(btnOne);
-//     first.attr("class", "btn btn-primary quest");
-//     p1.append(first);
-//     // Button 2
-//     var p1 = $("<p>");
-//     articleEl.append(p1);
-//     var second = $("<button>");
-//     second.html(btnTwo);
-//     second.attr("class", "btn btn-primary quest");
-//     p1.append(second);
-//     // Button 3
-//     var p1 = $("<p>");
-//     articleEl.append(p1);
-//     var third = $("<button>");
-//     third.html(btnThree);
-//     third.attr("class", "btn btn-primary quest");
-//     p1.append(third);
-//     // Button 4
-//     var p1 = $("<p>");
-//     articleEl.append(p1);
-//     var fourth = $("<button>");
-//     fourth.html(btnFour);
-//     fourth.attr("class", "btn btn-primary quest");
-//     p1.append(fourth);
-// }
-// };
+function start () {
+    // Empty the Article.
+    articleEl.empty();
+    for (i=0; i<question.length; i++) {
+    // H2
+    var h2El = $("<h2>", {text:''});
+    h2El.html(questions[i]["question"]);
+    h2El.attr("class", "newh2");
+    articleEl.append(h2El);
+    // Button 1
+    var p1 = $("<p>");
+    articleEl.append(p1);
+    var first = $("<button>");
+    first.html(questions[i][btnOne]);
+    first.attr("class", "btn btn-primary quest");
+    p1.append(first);
+    // Button 2
+    var p1 = $("<p>");
+    articleEl.append(p1);
+    var second = $("<button>");
+    second.html(questions[i][btnTwo]);
+    second.attr("class", "btn btn-primary quest");
+    p1.append(second);
+    // Button 3
+    var p1 = $("<p>");
+    articleEl.append(p1);
+    var third = $("<button>");
+    third.html(questions[i][btnThree]);
+    third.attr("class", "btn btn-primary quest");
+    p1.append(third);
+    // Button 4
+    var p1 = $("<p>");
+    articleEl.append(p1);
+    var fourth = $("<button>");
+    fourth.html(questions[i][btnFour]);
+    fourth.attr("class", "btn btn-primary quest");
+    p1.append(fourth);
+}
+};
 
 
 // //////// FINAL PAGE ////////
