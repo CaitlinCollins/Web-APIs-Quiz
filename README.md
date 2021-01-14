@@ -1,17 +1,13 @@
 # Web-APIs-Quiz
 Timed Multiple Choice Quiz
 ## Table of Contents ##
-[Description](https://github.com/CaitlinCollins/Web-APIs-Quiz
-#description)
+[Description](https://github.com/CaitlinCollins/Web-APIs-Quiz#description)
 
-[Tools](https://github.com/CaitlinCollins/Web-APIs-Quiz
-#javascript-tools)
+[Tools](https://github.com/CaitlinCollins/Web-APIs-Quiz#javascript-tools)
 
-[Features](https://github.com/CaitlinCollins/Web-APIs-Quiz
-#features)
+[Features](https://github.com/CaitlinCollins/Web-APIs-Quiz#features)
 
-[Screen Shots](https://github.com/CaitlinCollins/Web-APIs-Quiz
-#screen-shots)
+[Screen Shots](https://github.com/CaitlinCollins/Web-APIs-Quiz#screen-shots)
 
 [Deploy Link](https://github.com/CaitlinCollins/Web-APIs-Quiz#deploy-link)
 ## Description ##
