@@ -146,6 +146,13 @@ p {
 	padding-left: 3%;
 	text-emphasis: bold;
 }
+/*** Highscores Page Style ***/
+
+/* Button Style */
+#clearScore {
+	margin-top: 12%;
+	width: 180px;
+}
 
 /** Special styling for screens under 768px **/
 @media only screen and (max-width: 768px) {
@@ -211,6 +218,12 @@ p {
 	/* Retry Button Style */
 	.retry {
 		margin-left: 35%;
+	}
+	/*** Highscores Page Style ***/
+
+	/* Button Style */
+	#clearScore {
+		margin-right: 30%;
 	}
 }
 
@@ -287,5 +300,13 @@ p {
 	/* Message Style */
 	.message {
 		text-align: center;
+	}
+	/*** Highscores Page */
+
+	/* Button Style */
+	#clearScore {
+		width: 120px;
+		font-size: 18px;
+		margin-right: 50%;
 	}
 }
