@@ -17,20 +17,20 @@ function renderScores() {
 }
 
 function getHighScore() {
-// get scores from local storage
-var storedScores = JSON.parse(localStorage.getItem("scores"));
+    // get scores from local storage
+    var storedScores = JSON.parse(localStorage.getItem("scores"));
 
-// update the array
-if (storedScores !== null) {
-    scores = storedScores;
-};
+    // update the array
+    if (storedScores !== null) {
+        scores = storedScores;
+    };
 
 // render the scores to the DOM
 renderScores();
 };
 
- // add a click event to the clearScore button
- $(clearScore).on("click", function (){
+// add a click event to the clearScore button
+$(clearScore).on("click", function (){
     $("#winnersList").empty()
 });
 

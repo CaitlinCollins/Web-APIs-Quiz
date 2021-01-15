@@ -34,8 +34,6 @@ function startTimer() {
     }, 1000);
 };
 
-
-
 // Set Alert Message Time Out
 function correctAnswer (){
     correctDiv = $("<div>");
