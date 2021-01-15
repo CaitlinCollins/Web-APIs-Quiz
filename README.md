@@ -3,7 +3,7 @@ Timed Multiple Choice Quiz
 ## Table of Contents ##
 [Description](https://github.com/CaitlinCollins/Web-APIs-Quiz#description)
 
-[Tools](https://github.com/CaitlinCollins/Web-APIs-Quiz#javascript-tools)
+[Tools](https://github.com/CaitlinCollins/Web-APIs-Quiz#Tools)
 
 [Features](https://github.com/CaitlinCollins/Web-APIs-Quiz#features)
 
