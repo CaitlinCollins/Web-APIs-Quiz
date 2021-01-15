@@ -725,3 +725,4 @@ $("#submit").on("click", function (event){
         storeScores();
     }
 });
+
