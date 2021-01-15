@@ -1,6 +1,6 @@
 var winnersList = $("#winnersList");
 var clearScore = $("#clearScore");
-var scores = JSON.parse(localStorage.getItem("scores")) || [];
+var scores = [];
 
 function renderScores() {
 
@@ -29,10 +29,11 @@ function getHighScore() {
 renderScores();
 };
 
+
 // add a click event to the clearScore button
 $(clearScore).on("click", function (){
     $("#winnersList").empty()
-    localStorage.setItem("scores", null);
+    localStorage.clear();
 });
 
 // render data to page on load
