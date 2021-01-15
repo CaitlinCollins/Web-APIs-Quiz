@@ -1,6 +1,6 @@
 var winnersList = $("#winnersList");
 var clearScore = $("#clearScore");
-
+var scores = JSON.parse(localStorage.getItem("scores")) || [];
 
 function renderScores() {
 
