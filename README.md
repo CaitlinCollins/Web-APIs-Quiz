@@ -31,11 +31,11 @@ The purpose of this project was to create a timed multiple choice quiz that feat
 * A linked Highscore page that displays and clears the highscores.
 * No errors in the console log.
 ## Screen Shots ##
-![Office1](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/Office1.png)
-![Office2](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/Office2.png)
-![Office3](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/Office3.png)
-![Office4](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/Office4.png)
-![Office5](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/Office5.png)
+![Office1](hhttps://github.com/CaitlinCollins/Web-APIs-Quiz/blob/main/assets/screenshots/Office1.png)
+![Office2](https://github.com/CaitlinCollins/Web-APIs-Quiz/blob/main/assets/screenshots/Office2.png)
+![Office3](https://github.com/CaitlinCollins/Web-APIs-Quiz/blob/main/assets/screenshots/Office3.png)
+![Office4](https://github.com/CaitlinCollins/Web-APIs-Quiz/blob/main/assets/screenshots/Office4.png)
+![Office5](https://github.com/CaitlinCollins/Web-APIs-Quiz/blob/main/assets/screenshots/Office5.png)
 
 ## Deploy Link ##
 https://caitlincollins.github.io/Web-APIs-Quiz/
