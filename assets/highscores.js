@@ -38,4 +38,7 @@ renderScores();
 getHighScore()
 
 // Save most recent score to local storage
-localStorage.setItem("scorelist", JSON.stringify(scores));
+function storeScores() {
+    localStorage.setItem("scoresList", JSON.stringify(scores));
+}
+

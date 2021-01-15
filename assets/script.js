@@ -696,7 +696,8 @@ var retry = $("<button>");
 }  
 // Highscore setting
 var userInitials = $(".formSubmit");
-var scores = [];
+var scores = JSON.parse(localStorage.getItem("scores")) || [];
+
 
 $("#submit").on("click", function (event){
     event.preventDefault();
