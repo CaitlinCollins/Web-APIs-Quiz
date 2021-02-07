@@ -1,5 +1,8 @@
 # Web-APIs-Quiz
 Timed Multiple Choice Quiz
+
+## Deploy Link ##
+
 ## Table of Contents ##
 [Description](https://github.com/CaitlinCollins/Web-APIs-Quiz#description)
 
@@ -9,7 +12,10 @@ Timed Multiple Choice Quiz
 
 [Screen Shots](https://github.com/CaitlinCollins/Web-APIs-Quiz#screen-shots)
 
-[Deploy Link](https://github.com/CaitlinCollins/Web-APIs-Quiz#deploy-link)
+[License](https://github.com/CaitlinCollins/Web-APIs-Quiz#license)
+
+[Author](https://github.com/CaitlinCollins/Web-APIs-Quiz#author)
+
 ## Description ##
 The purpose of this project was to create a timed multiple choice quiz that features dynamically updated HTML and CSS powered by JavaScript.  
 ## Tools ##
@@ -37,7 +43,12 @@ The purpose of this project was to create a timed multiple choice quiz that feat
 ![Office4](https://github.com/CaitlinCollins/Web-APIs-Quiz/blob/main/assets/screenshots/Office4.png)
 ![Office5](https://github.com/CaitlinCollins/Web-APIs-Quiz/blob/main/assets/screenshots/Office5.png)
 
-## Deploy Link ##
-https://caitlincollins.github.io/Web-APIs-Quiz/
+## License ##
+
+MIT
+
+## Author ##
+
+Caitlin Collins caitlin.aileen86@gmail.com
 
 
