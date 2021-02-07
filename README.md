@@ -3,6 +3,8 @@ Timed Multiple Choice Quiz
 
 ## Deploy Link ##
 
+https://caitlincollins.github.io/Web-APIs-Quiz/
+
 ## Table of Contents ##
 [Description](https://github.com/CaitlinCollins/Web-APIs-Quiz#description)
 
